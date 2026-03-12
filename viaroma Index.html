@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Via Roma</title>
+
+<style>
+/* --- CORREÇÕES PARA IPHONE --- */
+.card-title, .profissional {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+
+.profissional.ativo{
+    background:#d6eaf8;
+    border-left:5px solid #0a3d62;
+    font-weight:bold;
+}
+
+.profissional.ativo .info{
+    background:#dff2ff;
+    border:1px solid #bcdff5;
+}
+
+.info{
+    transition: all 0.3s ease;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+}
+header {
+    background: #0a3d62;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+nav {
+    background: #074a7a;
+    text-align: center;
+    padding: 10px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+section {
+    padding: 40px 20px;
+}
+h2 {
+    text-align: center;
+    color: #0a3d62;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: bold;
+    font-size: 18px;
+    padding: 5px 0;
+}
+.submenu {
+    display: none;
+    margin-top: 15px;
+}
+.profissional {
+    background: #f8fbff;
+    margin: 8px 0;
+    padding: 12px;
+    border-radius: 6px;
+}
+.profissional:hover {
+    background: #eaf2f8;
+}
+.info {
+    display: none;
+    margin-top: 8px;
+    font-size: 15px;
+    background: #eaf2f8;
+    padding: 15px;
+    border-radius: 5px;
+}
+footer {
+    background: #022c43;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+@media(max-width:768px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Via Roma</h1>
+</header>
+
+<nav>
+    <a href="#especialidades"></a>
+</nav>
+
+<section id="especialidades">
+<h2>Especialidades</h2>
+
+<div class="grid">
+
+<div class="card">
+    <div class="card-title" role="button" onclick="toggleMenu('odontologia')">Odontologia</div>
+    <div id="odontologia" class="submenu">
+        <div class="profissional" role="button" onclick="toggleInfo('o1')">Ailla Fernandes de Andrade
+            <div id="o1" class="info">
+                <p><strong>1º andar / Sala 15</strong> </p>
+                <p><strong>Descrição:</strong> Escrever descrição</p>
+                <p><strong>Especialidade:</strong> Odontologia</p>
+                <p><strong>Contato:</strong>  WhatsApp: </p>
+            </div>
+        </div>
+        <div class="profissional" role="button" onclick="toggleInfo('o2')">Cassia Kanetaka
+            <div id="o2" class="info">
+                <p><strong>2º andar / Sala 22</strong> </p>
+                <p><strong>Descrição:</strong> Escrever descrição</p>
+                <p><strong>Especialidade:</strong> Odontologia</p>
+                <p><strong>Contato:</strong>  WhatsApp:  </p>
+            </div>
+        </div>
+        <div class="profissional" role="button" onclick="toggleInfo('o3')">Debora Farias Fernandes
+            <div id="o3" class="info">
+                <p><strong>1° andar / sala 15</strong> </p>
+                <p><strong>Descrição:</strong> Escrever descrição</p>
+                <p><strong>Especialidade:</strong> Odontologia</p>
+                <p><strong>Contato:</strong>  WhatsApp: </p>
+            </div>
+        </div>
+        <div class="profissional" role="button" onclick="toggleInfo('o4')">Fabio Giacomelli
+            <div id="o4" class="info">
+                <p><strong>2º andar / Sala 21</strong> </p>
+                <p><strong>Descrição:</strong> Escrever descrição</p>
+                <p><strong>Especialidade:</strong> Odontologia</p>
+                <p><strong>Contato:</strong>  WhatsApp: </p>
+            </div>
+        </div>
+        <div class="profissional" role="button" onclick="toggleInfo('o5')">Laís Guimarães Ramos
+            <div id="o5" class="info">
+                <p><strong>2º andar / Sala 23</strong> </p>
+                <p><strong>Descrição:</strong> Escrever descrição</p>
+                <p><strong>Especialidade:</strong> Odontologia</p>
+                <p><strong>Contato:</strong>  WhatsApp: </p>
+            </div>
+        </div>
+        <div class="profissional" role="button" onclick="toggleInfo('o6')">Laura Gonçalves Aldrighi
+            <div id="o6" class="info">
+                <p><strong>1º andar / Sala 15</strong> </p>
+                <p><strong>Descrição:</strong> Escrever descrição</p>
+                <p><strong>Especialidade:</strong> Odontologia</p>
+                <p><strong>Contato:</strong>  WhatsApp: </p>
+            </div>
+        </div>
+        <div class="profissional" role="button" onclick="toggleInfo('o7')">Mariana Dalle Nogare
+            <div id="o7" class="info">
+                <p><strong>1º andar / Sala 15</strong> </p>
+                <p><strong>Descrição:</strong> Escrever descrição</p>
+                <p><strong>Especialidade:</strong> Odontologia</p>
+                <p><strong>Contato:</strong> WhatsApp: </p>
+            </div>
+        </div>
+        <div class="profissional" role="button" onclick="toggleInfo('o8')">Maria Aparecida
+            <div id="o8" class="info">
+                <p><strong>9º andar / Sala 94</strong> </p>
+                <p><strong>Descrição:</strong> Escrever descrição</p>
+                <p><strong>Especialidade:</strong> Odontologia</p>
+                <p><strong>Contato:</strong>  WhatsApp: </p>
+            </div>
+        </div>
+        <div class="profissional" role="button" onclick="toggleInfo('o9')">Renato Bekerman
+            <div id="o9" class="info">
+                <p><strong>8º andar / Sala 86</strong> </p>
+                <p><strong>Descrição:</strong> Sou Renato Bekerman e estou na sala 86, 
+Odontologia, 
+Clínico geral, 
+Especialista em Periodontia, 
+Especialista em Dentística Restauradora - Estética, 
+Credenciamento em Implantes e Prótese sobre Implantes
+.</p>
+                <p><strong>Especialidade:</strong> Odontologia</p>
+                <p><strong>Contato:</strong>  WhatsApp: (11) 98171-7679</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-title" role="button" onclick="toggleMenu('mental')">Saúde Mental</div>
+    <div id="mental" class="submenu">
+        <div class="profissional" role="button" onclick="toggleInfo('m1')">Ana Lucia Perroti
+            <div id="m1" class="info">
+                <p><strong>10º andar / Sala 104</strong> </p>
+                <p><strong>Descrição:</strong> escrever descrição </p>
+                <p><strong>Especialidade:</strong> Psicóloga Analítica </p>
+                <p><strong>Contato:</strong>  WhatsApp: </p>
+            </div>
+        </div>
+        <div class="profissional" role="button" onclick="toggleInfo('m2')">Ana Maria Munhoz Fett
+            <div id="m2" class="info">
+                <p><strong>10º andar / Sala 106</strong> </p>
+                <p><strong>Descrição:</strong> Sou Ana Maria Munhoz Fett e estou na sala 106.
+Pedagoga;
+Psicopedagoga;
+Mestre em Psicologia do Desenvolvimento Humano e Processos de Ensino e Aprendizagem;
+Especializada no JAP - Jogo de Areia Psicopedagógico;
+Membro da Diretoria Executiva da ABPp Nacional;
+Atendo crianças e adolescentes com dificuldades de aprendizagem e 
+Realizo Supervisão em Psicopedagogia Institucional e Clínica.
+ </p>
+                <p><strong>Especialidade:</strong> Psicopedagoga </p>
+                <p><strong>Contato:</strong>  WhatsApp: (11) 99900-7596</p>
+            </div>
+        </div>
+        <div class="profissional" role="button" onclick="toggleInfo('m3')">Andrea Santarelli
+            <div id="m3" class="info">
+                <p><strong>4º andar / Sala 41</strong> </p>
+                <p><strong>Descrição:</strong> escrever descrição .</p>
+                <p><strong>Especialidade:</strong> Psicóloga </p>
+                <p><strong>Contato:</strong>  WhatsApp: </p>
+            </div>
+        </div>
+        <div class="profissional" role="button" onclick="toggleInfo('m4')">Andréia Robles
+            <div id="m4" class="info">
+                <p><strong>1º andar / Sala 11</strong> </p>
+                <p><strong>Descrição:</strong> escrever descrição </p>
+                <p><strong>Especialidade:</strong> Psicóloga e Pedagoga </p>
+                <p><strong>Contato:</strong>  WhatsApp: </p>
+            </div>
+        </div>
+        <div class="profissional" role="button" onclick="toggleInfo('m5')">Bruna Giannini
+            <div id="m5" class="info">
+                <p><strong>10º andar / Sala 103</strong> </p>
+                <p><strong>Descrição:</strong> escrever descrição </p>
+                <p><strong>Especialidade:</strong> Psicanalista </p>
+                <p><strong>Contato:</strong>  WhatsApp: </p>
+            </div>
+        </div>
+        <div class="profissional" role="button" onclick="toggleInfo('m6')">Denir Camargo Freitas
+            <div id="m6" class="info">
+                <p><strong>10º andar / Sala 101</strong> </p>
+                <p><strong>Descrição:</strong> escrever descrição </p>
+                <p><strong>Especialidade:</strong> Psicanalista </p>
+                <p><strong>Contato:</strong>  WhatsApp: </p>
+            </div>
+        </div>
+        <div class="profissional" role="button" onclick="toggleInfo('m7')">Doroty Bermudes
+            <div id="m7" class="info">
+                <p><strong>6º andar / Sala 65</strong> </p>
+                <p><strong>Descrição:</strong> escrever descrição </p>
+                <p><strong>Especialidade:</strong> Psicóloga analista junguiana. </p>
+                <p><strong>Contato:</strong>  WhatsApp: </p>
+            </div>
+        </div>
+        <div class="profissional" role="button" onclick="toggleInfo('m8')">Izilda A. Warzee Costa
+            <div id="m8" class="info">
+                <p><strong>5º andar / Sala 52</strong> </p>
+                <p><strong>Descrição:</strong> escrever descrição.</p>
+                <p><strong>Especialidade:</strong> Psicóloga - Psicanalista</p>
+                <p><strong>Contato:</strong>  WhatsApp: </p>
+            </div>
+        </div>
+        <div class="profissional" role="button" onclick="toggleInfo('m9')">Katia Prado
+            <div id="m9" class="info">
+                <p><strong>9º andar / Sala 93</strong> </p>
+                <p><strong>Descrição:</strong> escrever descrição </p>
+                <p><strong>Especialidade:</strong> Psicóloga Infantojuvenil </p>
+                <p><strong>Contato:</strong>  WhatsApp: </p>
+            </div>
+        </div>
+        <div class="profissional" role="button" onclick="toggleInfo('m10')">Luzdalma Paiva Lima
+            <div id="m10" class="info">
+                <p><strong>10º andar / Sala 106</strong> </p>
+                <p><strong>Descrição:</strong> escrever descrição.</p>
+                <p><strong>Especialidade:</strong> Professora </p>
+                <p><strong>Contato:</strong>  WhatsApp: </p>
+            </div>
+        </div>
+        <div class="profissional" role="button" onclick="toggleInfo('m11')">Maria Elene Garcia
+            <div id="m11" class="info">
+                <p><strong>6º andar / Sala 62</strong> </p>
+                <p><strong>Descrição:</strong> escrever descrição </p>
+                <p><strong>Especialidade:</strong> Psicanalise e psicossomática</p>
+                <p><strong>Contato:</strong>  WhatsApp: </p>
+            </div>
+        </div>
+        <div class="profissional" role="button" onclick="toggleInfo('m12')">Nancy Fiorillo
+            <div id="m12" class="info">
+                <p><strong>4º andar / Sala 44</strong> </p>
+                <p><strong>Descrição:</strong> Atendimento a adolescentes e adultos.</p>
+                <p><strong>Especialidade:</strong> Psicóloga Clínica </p>
+                <p><strong>Contato:</strong> WhatsApp: (11) 99111-9596 </p>
+            </div>
+        </div>
+        <div class="profissional" role="button" onclick="toggleInfo('m13')">Nádia Bossa
+            <div id="m13" class="info">
+                <p><strong>1º andar / Sala 13</strong> </p>
+                <p><strong>Descrição:</strong> Sou Nádia Bossa, estou na sala 13. Psicóloga e neuropsicologa com pós doutorado em neurologia cognitiva na faculdade de medicina da USP. Trabalho com avaliação e reabilitação neuropsicológica para crianças, adolescentes e adultos. Diagnóstico diferencial em transtornos neurológicos e/ou psiquiátricos..</p>
+                <p><strong>Especialidade:</strong> Psicóloga -  Neuropsicóloga - Psicopedagoga</p>
+                <p><strong>Contato:</strong> WhatsApp: 11 95059-9998</p>
+            </div>
+        </div>
+		 <div class="profissional" role="button" onclick="toggleInfo('m18')">Patricia A. Cassiolato
+            <div id="m18" class="info">
+                <p><strong>6º andar / Sala 64</strong> </p>
+                <p><strong>Descrição:</strong> Neuropsicopedagoga clínica e institucional especializada em educação especial e Psicomotricista.</p>
+                <p><strong>Especialidade:</strong> Neuropsicopedagoga </p>
+                <p><strong>Contato:</strong> WhatsApp: (11) 99279-7399 </p>
+            </div>
+        </div>
+        <div class="profissional" role="button" onclick="toggleInfo('m14')">Regina Giannini
+            <div id="m14" class="info">
+                <p><strong>10º andar / Sala 103</strong> </p>
+                <p><strong>Descrição:</strong> escrever descrição.</p>
+                <p><strong>Especialidade:</strong> Psicóloga</p>
+                <p><strong>Contato:</strong>  WhatsApp: </p>
+            </div>
+        </div>
+        <div class="profissional" role="button" onclick="toggleInfo('m15')">Rosângela Cassiolato
+            <div id="m15" class="info">
+                <p><strong>6º andar / Sala 64</strong> </p>
+                <p><strong>Descrição:</strong> Psicóloga Clínica Comportamental.</p>
+                <p><strong>Especialidade:</strong> Psicóloga</p>
+                <p><strong>Contato:</strong>  WhatsApp: (11) 99222-0095</p>
+            </div>
+        </div>
+        <div class="profissional" role="button" onclick="toggleInfo('m16')">Silmara Vicente
+            <div id="m16" class="info">
+                <p><strong>8º andar / Sala 85</strong> </p>
+                <p><strong>Descrição:</strong> escrever descrição</p>
+                <p><strong>Especialidade:</strong> Psicóloga - EMDR - Psicotrauma </p>
+                <p><strong>Contato:</strong> WhatsApp: </p>
+            </div>
+        </div>
+        <div class="profissional" role="button" onclick="toggleInfo('m17')">Thaisa Tura Mendonça
+            <div id="m17" class="info">
+                <p><strong>10º andar / Sala 103</strong> </p>
+                <p><strong>Descrição:</strong> Escrever descrição</p>
+                <p><strong>Especialidade:</strong> Psicologia</p>
+                <p><strong>Contato:</strong>  WhatsApp: </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-title" role="button" onclick="toggleMenu('fonoaudiologia')">Fonoaudiologia</div>
+    <div id="fonoaudiologia" class="submenu">
+	<div class="profissional" role="button" onclick="toggleInfo('f6')">Audzen Aparelhos Auditivos
+            <div id="f6" class="info">
+                <p><strong>8º andar / Sala 84</strong> </p>
+                <p><strong>Descrição:</strong> audzen Aparelhos Auditivos, fundada pelo fonoaudiólogo Roberto Minoru Yoshimura, graduado pela USP (2004) e Pós Graduado em Audiologia Clinica (2006). Com mais de 20 anos de experiencia com próteses auditivas, possui clinicas espalhadas por São Paulo e Grande São Paulo (São Paulo, Aphaville, Osasc e Carapicuiba)..</p>
+                <p><strong>Especialidade:</strong> Fonoaudiologia</p>
+                <p><strong>Contato:</strong>  Whatsapp: (11)98758-3161 ou 2978-2518 / 3685-2246 / 3683-5387 </p>
+            </div>
+        </div>
+        <div class="profissional" role="button" onclick="toggleInfo('f1')">Brendha Lowys Teixeira
+            <div id="f1" class="info">
+                <p><strong>3º andar / Sala 33</strong> </p>
+                <p><strong>Descrição:</strong> escrever descrição.</p>
+                <p><strong>Especialidade:</strong> Fonoaudiologia</p>
+                <p><strong>Contato:</strong>  WhatsApp: </p>
+            </div>
+        </div>
+        <div class="profissional" role="button" onclick="toggleInfo('f2')">Celina Augusta Kima
+            <div id="f2" class="info">
+                <p><strong>3º andar / Sala 33</strong> </p>
+                <p><strong>Descrição:</strong> escrever descrição </p>
+                <p><strong>Especialidade:</strong> Fonoaudiologia</p>
+                <p><strong>Contato:</strong>  WhatsApp: </p>
+            </div>
+        </div>
+        <div class="profissional" role="button" onclick="toggleInfo('f3')">Janaina Gomes da Costa
+            <div id="f3" class="info">
+                <p><strong>3º andar / Sala 33</strong> </p>
+                <p><strong>Descrição:</strong> escrever descrição.</p>
+                <p><strong>Especialidade:</strong> Fonoaudiologia</p>
+                <p><strong>Contato:</strong>  WhatsApp: </p>
+            </div>
+        </div>
+        <div class="profissional" role="button" onclick="toggleInfo('f4')">Tatiana Lamas
+            <div id="f4" class="info">
+                <p><strong>4º andar / Sala 42</strong> </p>
+                <p><strong>Descrição:</strong> 
+Me chamo Tatiana, sou fonoaudióloga e estou na sala 42.
+Tenho especialização na área da linguagem oral e escrita. Fiz parte do ambulatório de transtorno de aprendizagem, TDAH e cognição social no centro paulista de neuropsicologia da UNIFESP. 
+Também atendo TEA e alterações,  motricidade orofacial e faço reabilitação cognitiva.</p>
+                <p><strong>Especialidade:</strong> Fonoaudiologia</p>
+                <p><strong>Contato:</strong>  WhatsApp: (11) 99587-4510</p>
+            </div>
+        </div>
+        <div class="profissional" role="button" onclick="toggleInfo('f5')">Viviane Campanelli
+            <div id="f5" class="info">
+                <p><strong>3º andar / Sala 33</strong> </p>
+                <p><strong>Descrição:</strong> Fonoaudiologia infantil, adolescente e adulto. Atendemos várias patologias.
+Além disso, realizamos audiometria, impedanciometria, processamento auditivo e terapia do processamento auditivo.
+</p>
+                <p><strong>Especialidade:</strong> Fonoaudiologia</p>
+                <p><strong>Contato:</strong>  WhatsApp: (11) 96589-0004 </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-title" role="button" onclick="toggleMenu('pediatria')">Pediatria / Neonatologia</div>
+    <div id="pediatria" class="submenu">
+        <div class="profissional" role="button" onclick="toggleInfo('p1')">Ruth Soraya N. Cohn
+            <div id="p1" class="info">
+                <p><strong>3º andar / Sala 31</strong> </p>
+                <p><strong>Descrição:</strong> Sou a Ruth Soraya e atendo na sala 31.
+				
+Pediatra e Neonatologista
+Título de Especialista em Pediatria pela SBP -
+AMB
+Título de Especialista em Neonatologia pela SBP - AMB.</p>
+                <p><strong>Especialidade:</strong> Pediatria / Neonatologia</p>
+                <p><strong>Contato:</strong>   WhatsApp: (11) 99198-7409</p>
+          </div>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-title" role="button" onclick="toggleMenu('oftalmologia')">Oftalmologia</div>
+    <div id="oftalmologia" class="submenu">
+        <div class="profissional" role="button" onclick="toggleInfo('ft3')">Rosana Molina Saraiva
+            <div id="ft3" class="info">
+                <p><strong>4º andar / Sala 45</strong> </p>
+                <p><strong>Descrição:</strong> Oftalmologista, especialista certificado pelo Conselho Brasileiro de Oftalmologia . Atendimento adulto e pediátrico</p>
+                <p><strong>Especialidade:</strong> Oftalmologia</p>
+                <p><strong>Contato:</strong> (11) 2604-5523 / (11) 2604-5260 | WhatsApp: (11) 94491-2340</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-title" role="button" onclick="toggleMenu('nutricionista')">Nutricionista</div>
+    <div id="nutricionista" class="submenu">
+        <div class="profissional" role="button" onclick="toggleInfo('n1')">Gabriela Tozarini Mello
+            <div id="n1" class="info">
+                <p><strong>9º andar / Sala 92</strong> </p>
+                <p><strong>Descrição:</strong> Nutricionista especialista em esportes, estética e saúde da mulher </p>
+                <p><strong>Especialidade:</strong> Nutrição esportiva </p>
+                <p><strong>Contato:</strong>   WhatsApp: (11) 971561736</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-title" role="button" onclick="toggleMenu('estetica')">Estética</div>
+    <div id="estetica" class="submenu">
+        <div class="profissional" role="button" onclick="toggleInfo('e1')">Juliane do Amaral
+            <div id="e1" class="info">
+			    <p><strong>Clinica Hosto</strong> </p>
+                <p><strong>10º andar / Sala 102</strong> </p>
+                <p><strong>Descrição:</strong> Escrever descrição</p>
+                <p><strong>Especialidade:</strong> Estética</p>
+                <p><strong>Contato:</strong>   WhatsApp: 11 97698-8206</p>
+            </div>
+        </div>
+        <div class="profissional" role="button" onclick="toggleInfo('e2')">Larissa Rangel
+            <div id="e2" class="info">
+                <p><strong>1º andar / Sala 16</strong> </p>
+                <p><strong>Descrição:</strong> Escrever descrição</p>
+                <p><strong>Especialidade:</strong> Estética</p>
+                <p><strong>Contato:</strong>  WhatsApp: </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-title" role="button" onclick="toggleMenu('oncologia')">Oncologia</div>
+    <div id="oncologia" class="submenu">
+        <div class="profissional" role="button" onclick="toggleInfo('on1')">Andreza Wildberger
+            <div id="on1" class="info">
+                <p><strong>4º andar / Sala 45</strong> </p>
+                <p><strong>Descrição:</strong> Oncologista clínica e quimioterapia.</p>
+                <p><strong>Especialidade:</strong> Oncologia</p>
+                <p><strong>Contato:</strong>  WhatsApp: </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-title" role="button" onclick="toggleMenu('podologia')">Podologia</div>
+    <div id="podologia" class="submenu">
+        <div class="profissional" role="button" onclick="toggleInfo('pd1')">Hmulti
+            <div id="pd1" class="info">
+                <p><strong>2º andar / Sala 26 </strong></p>
+                <p><strong>Descrição:</strong> Venda de produtos de podologia.</p>
+                <p><strong>Especialidade:</strong> Podologia</p>
+				<p><strong>Horário de atendimento:</strong> Seg à Sex 09h00 às 18h00</p>
+                <p><strong>Contato:</strong>  WhatsApp: (11) 91254-3376</p>
+				<p><strong>Email de contato:</strong> loja@hmulti.com.br</p>
+            </div>
+        </div>
+        <div class="profissional" role="button" onclick="toggleInfo('pd3')">Yumi Ikeda
+            <div id="pd3" class="info">
+                <p><strong>5º andar / Sala 53</strong> </p>
+                <p><strong>Descrição:</strong> Podologista infantil / Espaço saúde.</p>
+                <p><strong>Especialidade:</strong> Podologia</p>
+                <p><strong>Contato:</strong>  WhatsApp: (11) 98915-2820</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-title" role="button" onclick="toggleMenu('fisioterapia')">Fisioterapia e Osteopatia</div>
+    <div id="fisioterapia" class="submenu">
+        <div class="profissional" role="button" onclick="toggleInfo('fi1')">Dra Débora Oliveira 
+            <div id="fi1" class="info">
+                <p><strong>3º andar / Sala 34</strong> </p>
+                <p><strong>Descrição:</strong> Dra. Débora Oliveira fisioterapia de reabilitação e preventiva, osteopatia crianças , adolescentes e adultos,especialidades: DTM, celfaleias, VPPB, genicologia/obstetrícia. Gerontologia..</p>
+                <p><strong>Especialidade:</strong> Fisioterapia e Osteopatia</p>
+                <p><strong>Contato:</strong>  WhatsApp: (11) 98339-9128</p>
+				<p><strong>Email:</strong>  deborac.fitness@gmail.com</p>
+            </div>
+        </div>
+        <div class="profissional" role="button" onclick="toggleInfo('fi2')">Patricia Aparecida Pereira Coutinho 
+            <div id="fi2" class="info">
+			    <p><strong>Lumiere fisioterapia peuvica</strong> </p>
+                <p><strong>9º andar / Sala 91</strong> </p>
+                <p><strong>Descrição:</strong> escrever descrição .</p>
+                <p><strong>Especialidade:</strong> Fisioterapia e Osteopatia</p>
+                <p><strong>Contato:</strong>   WhatsApp: (11) 93949-3900</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+</section>
+
+<footer>
+    <p>Email: adm.viaroma@gmail.com</p>
+    <p>Telefone Recepção: 2076-8250 | Whatsapp Recepção: 11 98950-4030</p>
+</footer>
+
+<script>
+function toggleMenu(id){
+    const menus = document.querySelectorAll(".submenu");
+    menus.forEach(menu => {
+        if(menu.id !== id){
+            menu.style.display = "none";
+            const infos = menu.querySelectorAll(".info");
+            infos.forEach(info=>{ info.style.display = "none"; });
+            const profissionais = menu.querySelectorAll(".profissional");
+            profissionais.forEach(p=>{ p.classList.remove("ativo"); });
+        }
+    });
+
+    const menu = document.getElementById(id);
+    if(menu.style.display === "block"){
+        menu.style.display = "none";
+    }else{
+        menu.style.display = "block";
+    }
+}
+
+function toggleInfo(id){
+    const info = document.getElementById(id);
+    const profissional = info.parentElement;
+    
+    // Pegar todas as infos e profissionais do submenu atual para resetar
+    const submenu = info.closest('.submenu');
+    const todasAsInfos = submenu.querySelectorAll(".info");
+    const todosOsProfissionais = submenu.querySelectorAll(".profissional");
+
+    if(info.style.display === "block"){
+        info.style.display="none";
+        profissional.classList.remove("ativo");
+    }else{
+        // Fecha as outras infos antes de abrir a nova
+        todasAsInfos.forEach(i => i.style.display = "none");
+        todosOsProfissionais.forEach(p => p.classList.remove("ativo"));
+        
+        info.style.display="block";
+        profissional.classList.add("ativo");
+    }
+}
+</script>
+
+</body>
+</html>
